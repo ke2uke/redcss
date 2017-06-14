@@ -12,7 +12,7 @@
    * size line-style color
    * 1px solid red
 
-##SASS LANGUAGE
+## SASS LANGUAGE
 I recommend using sass if you can http://sass-lang.com/
 if you take a peak at the styles.scss file and compare it to
 the ordinary styles.css you can see how much easier it is to edit
