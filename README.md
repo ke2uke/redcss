@@ -2,11 +2,11 @@
 ### Reddit CSS
 #### author: Luke E Summerscales
 
-##Notes:
-####for none CSS users
+## Notes:
+#### for none CSS users
 1. color formats are as follows
 ..* by name
-..* hexadecimal
+..* hexadecimal #FFF or #FFFFFF
 ..* rbga(0,0,0,0)
 2. border styling is as follows
 ..* size line-style color
