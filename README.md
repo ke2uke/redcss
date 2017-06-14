@@ -5,8 +5,8 @@
 ## Notes:
 #### for none CSS users
 1. color formats are as follows
-..* by name
-..* hexadecimal #FFF or #FFFFFF
+..- by name
+..+ hexadecimal #FFF or #FFFFFF
 ..* rbga(0,0,0,0)
 2. border styling is as follows
 ..* size line-style color
