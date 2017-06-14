@@ -1,2 +1,4 @@
 # redcss
-Reddit CSS
+## Reddit CSS
+
+## author: Luke E Summerscales
