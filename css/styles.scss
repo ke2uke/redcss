@@ -1,0 +1,203 @@
+/**
+  NOTES:
+    fonts will use the first compatible in the list
+    all colors can user the following formats
+      #FFFFFF
+      #FFF
+      rgba(0,0,0,0)
+    border format is as follows
+      size line-style color
+      EG: 1px solid #FFF
+
+    ITS RECOMMENDED TO USE THE SASS which will make it so much easier to
+    configure - http://sass-lang.com
+  */
+
+// Page
+$BACKGROUND-COLOR: #DDF;
+$FONT: helvetica arial sans-serif serif; //Will use first font supported
+$LINK-COLOR: #99F;
+
+// Reddit Navigation - Subreddit links */
+$RNAV-FONT: helvetica arial sans-serif serif;
+$RNAV-FONT-WEIGHT: none;
+$RNAV-BACKGROUND-COLOR: #DDF;
+$RNAV-DROPDOWN-BACKGROUND: #DDF;
+$RNAV-TEXT-COLOR: #000;
+$RNAV-DROPDOWN-TEXT-COLOR: #000;
+$RNAV-BORDER: 1px solid #000;
+
+// Main Header - Subreddit Name
+$HEADER-FONT: helvetica arial sans-serif serif;
+$HEADER-SIZE: 48px;
+$HEADER-FONT-WEIGHT: bold;
+$HEADER-BACKGROUND: #99F;
+$HEADER-COLOR: #900;
+$HEADER-BORDER: 1px solid #000;
+$HEADER-HEIGHT: 100px;
+$HEADER-VERTICAL: 23px;
+
+// Navigation Tabs
+$NAV-BACKGROUND-COLOR: #99F;
+$NAV-COLOR: #DDF;
+$NAV-SPACING: 0px;
+$NAV-SELECTED-BORDER: 1px solid #DDF;
+$NAV-SELECTED-TEXT-COLOR: #DDF;
+$NAV-SELECTED-BACKGROUND-COLOR: #99F;
+$NAV-HOVER-BACKGROUND-COLOR: #99F;
+
+// Account box
+$ACCOUNT-BACKGROUND-COLOR: #DDF;
+$ACCOUNT-BORDER: 1px solid #000;
+$ACCOUNT-BORDER-RADIUS: 5px;
+$ACCOUNT-KARMA-COLOR: #888;
+$ACCOUNT-TEXT-COLOR: #99F;
+$ACCOUNT-FONT-WEIGHT: bold;
+
+// Main Content Links
+$CONTENT-COLOR: #000;
+$CONTENT-VISITED: #888;
+$CONTENT-LINKS: #555;
+
+// Side Box
+$SIDE-HEADER-TEXT-COLOR: #900;
+$SIDE-HEADER-FONT: helvetica arial sans-serif serif;
+$SIDE-HEADER-FONT-SIZE: 24px;
+$SIDE-HEADER-FONT-WEIGHT: bold;
+$SIDE-BACKGROUND-COLOR: #DDF;
+$SIDE-TEXT-COLOR: #000;
+$SIDE-LINK-COLOR: #99F;
+$SIDE-FONT-WEIGHT: bold;
+$SIDE-SUBMIT-BUTTON-BORDER: 1px solid #000;
+
+/* Main body content */
+body {
+  background-color: $BACKGROUND-COLOR;
+  font-family: $FONT;
+}
+a, .tagline a{
+  color: $LINK-COLOR;
+}
+/* Reddit Navigation - Subreddit links */
+#sr-header-area {
+  border-bottom: $RNAV-BORDER;
+  font-family: $RNAV-FONT;
+  font-weight: $RNAV-FONT-WEIGHT;
+  background-color: $RNAV-BACKGROUND-COLOR;
+}
+/* Dropdown box colors */
+.drop-choices, .drop-choices a{
+  background-color: $RNAV-BACKGROUND-COLOR;
+  color: $RNAV-TEXT-COLOR;
+}
+.flat-list li a {
+  /* future use */
+}
+/* MYSUBREDDITS and EDIT menu colors */
+.dropdown.srdrop .selected, #sr-more-link {
+  color: $RNAV-DROPDOWN-TEXT-COLOR;
+  background-color: $RNAV-DROPDOWN-BACKGROUND;
+}
+/* Main Header content */
+#header {
+  background: $HEADER-BACKGROUND;
+  border-bottom: $HEADER-BORDER;
+  height: $HEADER-HEIGHT;
+}
+/* Reddit Logo Removed*/
+#header-img.default-header {
+  visibility: hidden;
+  width: 0px;
+}
+/* Subreddit name box */
+#header-bottom-left {
+  margin-top: $HEADER-VERTICAL;
+}
+/* Subreddit Name */
+#header-bottom-left .redditname, #header-bottom-left .redditname a {
+  font-family: $HEADER-FONT;
+  font-size: $HEADER-SIZE;
+  font-weight: $HEADER-FONT-WEIGHT;
+  background-color: $HEADER-BACKGROUND;
+  color: $HEADER-COLOR;
+}
+/* Account management box */
+#header-bottom-right {
+  background-color: $ACCOUNT-BACKGROUND-COLOR;
+  border: $ACCOUNT-BORDER;
+  border-bottom: none;
+  border-radius: $ACCOUNT-BORDER-RADIUS;
+}
+/* Navigation tabs spacing */
+.tabmenu li {
+  margin: $NAV-SPACING;
+}
+/* Navigation tabs background and text */
+.tabmenu li a {
+  background-color: $NAV-BACKGROUND-COLOR;
+  color: $NAV-COLOR;
+}
+/* Navigation link hover effect */
+.tabmenu li a:hover {
+  /* advanced */
+  background-color: $NAV-HOVER-BACKGROUND-COLOR;
+}
+/* Selected tab style */
+.tabmenu li.selected a {
+  background-color: $NAV-SELECTED-BACKGROUND-COLOR;
+  border: $NAV-SELECTED-BORDER;
+  border-bottom: $HEADER-BORDER;
+  color: $NAV-SELECTED-TEXT-COLOR;
+}
+/* username karma */
+.user {
+   color: $ACCOUNT-KARMA-COLOR;
+}
+/* account, preferences and logout */
+.user a, #header-bottom-right .flat-list li a, #header-bottom-right .logout a{
+   color: $ACCOUNT-TEXT-COLOR;
+   background-color: $ACCOUNT-BACKGROUND-COLOR;
+   font-weight: $ACCOUNT-FONT-WEIGHT;
+}
+/* Non-Visited Content Color */
+.thing .title, .link .title {
+  color: $CONTENT-COLOR;
+}
+/* Visited Content Color */
+.thing .title a:visited {
+  color: $CONTENT-VISITED;
+}
+/* Links under posts - comment, share, save etc*/
+.entry .buttons li a {
+  color: $CONTENT-LINKS;
+}
+/* submitted xx minutes ago by - color */
+.tagline {
+  color: $CONTENT-LINKS;
+}
+/* Side box */
+.side, .leavemoderator, .titlebox form.toggle, .icon-menu a, .morelink, .sidebox.create .spacer{
+  background: none;
+  background-color: $SIDE-BACKGROUND-COLOR;
+  color: $SIDE-TEXT-COLOR;
+  font-weight: $SIDE-FONT-WEIGHT;
+}
+/*Submit Buttons Border*/
+.morelink {
+  border: $SIDE-SUBMIT-BUTTON-BORDER;
+}
+/* Submit Buttons Text Color*/
+.morelink a{
+  color: $SIDE-LINK-COLOR;
+}
+/* Side Box Header - Subreddit name*/
+.titlebox h1 a {
+  color: $SIDE-HEADER-TEXT-COLOR;
+  font-family: $SIDE-HEADER-FONT;
+  font-size: $SIDE-HEADER-FONT-SIZE;
+  font-weight: $SIDE-HEADER-FONT-WEIGHT;
+}
+/* remove nub(arror) on buttons */
+.nub {
+visibility: hidden;
+}
