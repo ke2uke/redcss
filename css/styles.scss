@@ -3,7 +3,8 @@ $TRANSPARENT: rgba(0,0,0,0);
 $LOGO: none;
 // Page
 $BACKGROUND-COLOR: #333;
-$FONT: helvetica arial sans-serif serif; //Will use first font supported
+// Will use first font supported
+$FONT: helvetica arial sans-serif serif;
 $LINK-COLOR: #6D6;
 
 // Reddit Navigation - Subreddit links */
@@ -121,22 +122,28 @@ a, .tagline a{
  *  You can insert your own logo by following the commnets
  */
 #header-img.default-header {
-  visibility: hidden; /* rmeove this  */
-  width: 0px; /* remove this */
-  background-image: $LOGO; /* url("image.png")  instead of "none" */
+  /* remove this  */
+  visibility: hidden;
+  /* remove this */
+  width: 0px;
+  /* url("image.png")  instead of "none" */
+  background-image: $LOGO;
   background-color: $TRANSPARENT;
 }
 /* Subreddit name box */
 #header-bottom-left {
-  position: absolute; /* comment this out for more control */
-  bottom: 0; /* if you comment position out, comment this too */
+  /* comment this out for more control */
+  position: absolute;
+  /* if you comment position out, comment this too */
+  bottom: 0;
   margin: $HEADER-MARGIN;
   padding: $HEADER-PADDING;
 }
 /* Subreddit Name */
 #header-bottom-left .redditname, #header-bottom-left .redditname a {
   background-color: $HEADER-BACKGROUND;
-  background-image: $HEADER-IMAGE; /* url("image.png")  instead of "none" */
+  /* url("image.png")  instead of "none" */
+  background-image: $HEADER-IMAGE;
   font-family: $HEADER-FONT;
   font-size: $HEADER-FONT-SIZE;
   font-weight: $HEADER-FONT-WEIGHT;

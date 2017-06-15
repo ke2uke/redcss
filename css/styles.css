@@ -46,28 +46,28 @@ a, .tagline a {
  *  You can insert your own logo by following the commnets
  */
 #header-img.default-header {
+  /* remove this  */
   visibility: hidden;
-  /* rmeove this  */
-  width: 0px;
   /* remove this */
-  background-image: none;
+  width: 0px;
   /* url("image.png")  instead of "none" */
+  background-image: none;
   background-color: transparent; }
 
 /* Subreddit name box */
 #header-bottom-left {
-  position: absolute;
   /* comment this out for more control */
-  bottom: 0;
+  position: absolute;
   /* if you comment position out, comment this too */
+  bottom: 0;
   margin: 0px 0px 0px 0px;
   padding: 0px; }
 
 /* Subreddit Name */
 #header-bottom-left .redditname, #header-bottom-left .redditname a {
   background-color: #333;
-  background-image: none;
   /* url("image.png")  instead of "none" */
+  background-image: none;
   font-family: helvetica arial sans-serif serif;
   font-size: 48px;
   font-weight: bold;
