@@ -2,6 +2,11 @@
 ### Reddit CSS
 #### author: Luke E Summerscales @Sadface_RL
 
+
+## USAGE:
+NON-SASS - Copy/paste the CSS file into your subreddit stylesheet edit it.
+SASS: Download the scss to edit and create your css file for copy/paste to your subreddit
+
 ## Notes:
 #### for none CSS users
 1. color formats are as follows
