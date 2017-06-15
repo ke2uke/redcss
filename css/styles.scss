@@ -144,11 +144,21 @@ a, .tagline a{
   border-bottom: none;
   border-radius: $ACCOUNT-BORDER-RADIUS;
 }
+/* username karma text*/
+.user {
+  color: $ACCOUNT-KARMA-COLOR;
+}
+/* account, preferences and logout text */
+.user a, #header-bottom-right .flat-list li a, #header-bottom-right .logout a{
+  background-color: $ACCOUNT-BACKGROUND-COLOR;
+  color: $ACCOUNT-TEXT-COLOR;
+  font-weight: $ACCOUNT-FONT-WEIGHT;
+}
 /* Navigation tabs spacing */
 .tabmenu li {
   margin: $NAV-SPACING;
 }
-/* Navigation tabs background and text */
+/* Navigation tabs background and text colors */
 .tabmenu li a {
   background-color: $NAV-BACKGROUND-COLOR;
   color: $NAV-COLOR;
@@ -158,22 +168,12 @@ a, .tagline a{
   /* advanced */
   background-color: $NAV-HOVER-BACKGROUND-COLOR;
 }
-/* Selected tab style */
+/* Selected tab styling */
 .tabmenu li.selected a {
   background-color: $NAV-SELECTED-BACKGROUND-COLOR;
   border: $NAV-SELECTED-BORDER;
   border-bottom: $HEADER-BORDER;
   color: $NAV-SELECTED-TEXT-COLOR;
-}
-/* username karma */
-.user {
-   color: $ACCOUNT-KARMA-COLOR;
-}
-/* account, preferences and logout */
-.user a, #header-bottom-right .flat-list li a, #header-bottom-right .logout a{
-   color: $ACCOUNT-TEXT-COLOR;
-   background-color: $ACCOUNT-BACKGROUND-COLOR;
-   font-weight: $ACCOUNT-FONT-WEIGHT;
 }
 /* Non-Visited Content Color */
 .thing .title, .link .title {
@@ -191,14 +191,14 @@ a, .tagline a{
 .tagline {
   color: $CONTENT-LINKS;
 }
-/* Side box */
+/* Side box/bar */
 .side, .leavemoderator, .titlebox form.toggle, .icon-menu a, .morelink, .sidebox.create .spacer{
   background: none;
   background-color: $SIDE-BACKGROUND-COLOR;
   color: $SIDE-TEXT-COLOR;
   font-weight: $SIDE-FONT-WEIGHT;
 }
-/*Submit Buttons Border*/
+/* Submit Buttons Border */
 .morelink {
   border: $SIDE-SUBMIT-BUTTON-BORDER;
 }
@@ -206,7 +206,7 @@ a, .tagline a{
 .morelink a{
   color: $SIDE-LINK-COLOR;
 }
-/* Side Box Header - Subreddit name*/
+/* Side Box Header - Subreddit name */
 .titlebox h1 a {
   color: $SIDE-HEADER-TEXT-COLOR;
   font-family: $SIDE-HEADER-FONT;

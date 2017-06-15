@@ -82,11 +82,21 @@ a, .tagline a {
   border-bottom: none;
   border-radius: 5px; }
 
+/* username karma text*/
+.user {
+  color: #888; }
+
+/* account, preferences and logout text */
+.user a, #header-bottom-right .flat-list li a, #header-bottom-right .logout a {
+  background-color: #DDF;
+  color: #99F;
+  font-weight: bold; }
+
 /* Navigation tabs spacing */
 .tabmenu li {
   margin: 0px; }
 
-/* Navigation tabs background and text */
+/* Navigation tabs background and text colors */
 .tabmenu li a {
   background-color: #99F;
   color: #DDF; }
@@ -96,22 +106,12 @@ a, .tagline a {
   /* advanced */
   background-color: #99F; }
 
-/* Selected tab style */
+/* Selected tab styling */
 .tabmenu li.selected a {
   background-color: #99F;
   border: 1px solid #DDF;
   border-bottom: 1px solid #000;
   color: #DDF; }
-
-/* username karma */
-.user {
-  color: #888; }
-
-/* account, preferences and logout */
-.user a, #header-bottom-right .flat-list li a, #header-bottom-right .logout a {
-  color: #99F;
-  background-color: #DDF;
-  font-weight: bold; }
 
 /* Non-Visited Content Color */
 .thing .title, .link .title {
@@ -129,14 +129,14 @@ a, .tagline a {
 .tagline {
   color: #555; }
 
-/* Side box */
+/* Side box/bar */
 .side, .leavemoderator, .titlebox form.toggle, .icon-menu a, .morelink, .sidebox.create .spacer {
   background: none;
   background-color: #DDF;
   color: #000;
   font-weight: bold; }
 
-/*Submit Buttons Border*/
+/* Submit Buttons Border */
 .morelink {
   border: 1px solid #000; }
 
@@ -144,7 +144,7 @@ a, .tagline a {
 .morelink a {
   color: #99F; }
 
-/* Side Box Header - Subreddit name*/
+/* Side Box Header - Subreddit name */
 .titlebox h1 a {
   color: #900;
   font-family: helvetica arial sans-serif serif;
