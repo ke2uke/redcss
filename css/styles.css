@@ -1,44 +1,44 @@
 /* Background color is per individual content */
 /* Main body content */
 body {
-  background-color: #DDF;
+  background-color: #333;
   font-family: helvetica arial sans-serif serif; }
 
 /* Link colors */
 a, .tagline a {
-  color: #99F; }
+  color: #6D6; }
 
 /* Reddit Navigation - Subreddit links */
 #sr-header-area {
   height: 18px;
-  background-color: #DDF;
+  background-color: #666;
   font-family: helvetica arial sans-serif serif;
-  font-weight: n400;
+  font-weight: 400;
   font-size: 9px;
   line-height: 18px;
   text-transform: uppercase;
   white-space: nowrap;
   margin: 0px;
   padding: 0px;
-  border-bottom: 1px solid #000; }
+  border-bottom: 1px solid #FFF; }
 
 /* Dropdown box colors */
-.drop-choices, .drop-choices a {
-  background-color: #DDF;
-  color: #000; }
+.drop-choices, .drop-choices a, .sr-bar a {
+  background-color: #666;
+  color: #9F9; }
 
 .flat-list li a {
   /* future use */ }
 
 /* MYSUBREDDITS and EDIT menu colors */
 .dropdown.srdrop .selected, #sr-more-link {
-  background-color: #DDF;
-  color: #000; }
+  background-color: #666;
+  color: #9F9; }
 
 /* Main Header style*/
 #header {
-  background: #99F;
-  border-bottom: 1px solid #000;
+  background: #333;
+  border-bottom: 1px solid #FFF;
   height: 100px; }
 
 /**
@@ -65,31 +65,34 @@ a, .tagline a {
 
 /* Subreddit Name */
 #header-bottom-left .redditname, #header-bottom-left .redditname a {
-  background-color: #99F;
+  background-color: #333;
   background-image: none;
   /* url("image.png")  instead of "none" */
   font-family: helvetica arial sans-serif serif;
   font-size: 48px;
   font-weight: bold;
-  color: #900;
+  color: #000;
+  /* THIS OUT comment this out to remove the header text effect */
+  text-shadow: 0 0 2px #FFF, 1px 1px 2px #FFF, -1px -1px 2px #FFF, 1px 0 #FFF, 0 1px #FFF, -1px 0 #FFF, 0 -1px #FFF, 3px 3px 3px black, -3px -3px 3px black, 3px 0 3px black, 0 3px 3px black, -3px 0 3px black, 0 -3px 3px black;
+  /* THIS OUT */
   /*color: $TRANSPARENT;*/
   /* this will had the text allowing a image*/ }
 
 /* Account management box */
 #header-bottom-right {
-  background-color: #DDF;
-  border: 1px solid #000;
+  background-color: #555;
+  border: 1px solid #FFF;
   border-bottom: none;
   border-radius: 5px; }
 
 /* username karma text*/
 .user {
-  color: #888; }
+  color: #494; }
 
 /* account, preferences and logout text */
 .user a, #header-bottom-right .flat-list li a, #header-bottom-right .logout a {
-  background-color: #DDF;
-  color: #99F;
+  background-color: #555;
+  color: #6D6;
   font-weight: bold; }
 
 /* Navigation tabs spacing */
@@ -98,24 +101,25 @@ a, .tagline a {
 
 /* Navigation tabs background and text colors */
 .tabmenu li a {
-  background-color: #99F;
-  color: #DDF; }
+  background-color: #333;
+  color: #494; }
 
 /* Navigation link hover effect */
 .tabmenu li a:hover {
   /* advanced */
-  background-color: #99F; }
+  background-color: #333;
+  color: #6D6; }
 
 /* Selected tab styling */
 .tabmenu li.selected a {
-  background-color: #99F;
-  border: 1px solid #DDF;
-  border-bottom: 1px solid #000;
-  color: #DDF; }
+  background-color: #555;
+  border: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  color: #6D6; }
 
 /* Non-Visited Content Color */
 .thing .title, .link .title {
-  color: #000; }
+  color: #FFF; }
 
 /* Visited Content Color */
 .thing .title a:visited {
@@ -123,30 +127,30 @@ a, .tagline a {
 
 /* Links under posts - comment, share, save etc*/
 .entry .buttons li a {
-  color: #555; }
+  color: #6D6; }
 
 /* submitted xx minutes ago by - color */
 .tagline {
-  color: #555; }
+  color: #6D6; }
 
 /* Side box/bar */
 .side, .leavemoderator, .titlebox form.toggle, .icon-menu a, .morelink, .sidebox.create .spacer {
   background: none;
-  background-color: #DDF;
-  color: #000;
+  background-color: #333;
+  color: #FFF;
   font-weight: bold; }
 
 /* Submit Buttons Border */
 .morelink {
-  border: 1px solid #000; }
+  border: 1px solid #FFF; }
 
 /* Submit Buttons Text Color*/
 .morelink a {
-  color: #99F; }
+  color: #6D6; }
 
 /* Side Box Header - Subreddit name */
 .titlebox h1 a {
-  color: #900;
+  color: #6D6;
   font-family: helvetica arial sans-serif serif;
   font-size: 24px;
   font-weight: bold; }
@@ -154,5 +158,14 @@ a, .tagline a {
 /* remove nub(arror) on buttons */
 .nub {
   visibility: hidden; }
+
+/* Post page colors */
+.roundfield, .content.submit .info-notice, .tabmenu.formtab .selected a {
+  background-color: #333;
+  color: #FFF; }
+
+/* Post page divider color */
+.formtabs-content {
+  border-top: 2px solid #FFF; }
 
 /*# sourceMappingURL=styles.css.map */

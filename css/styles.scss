@@ -2,21 +2,21 @@
 $TRANSPARENT: rgba(0,0,0,0);
 $LOGO: none;
 // Page
-$BACKGROUND-COLOR: #DDF;
+$BACKGROUND-COLOR: #333;
 $FONT: helvetica arial sans-serif serif; //Will use first font supported
-$LINK-COLOR: #99F;
+$LINK-COLOR: #6D6;
 
 // Reddit Navigation - Subreddit links */
 $RNAV-HEIGHT: 18px;
-$RNAV-BACKGROUND-COLOR: #DDF;
-$RNAV-DROPDOWN-BACKGROUND: #DDF;
+$RNAV-BACKGROUND-COLOR: #666;
+$RNAV-DROPDOWN-BACKGROUND: #666;
 $RNAV-FONT: helvetica arial sans-serif serif;
-$RNAV-FONT-WEIGHT: n400;
+$RNAV-FONT-WEIGHT: 400;
 $RNAV-FONT-SIZE: 9px;
 $RNAV-LINE-HEIGHT: 18px;
-$RNAV-TEXT-COLOR: #000;
-$RNAV-DROPDOWN-TEXT-COLOR: #000;
-$RNAV-BORDER: 1px solid #000;
+$RNAV-TEXT-COLOR: #9F9;
+$RNAV-DROPDOWN-TEXT-COLOR: #9F9;
+$RNAV-BORDER: 1px solid #FFF;
 $RNAV-MARGIN: 0px;
 $RNAV-PADDING: 0px;
 $RNAV-WHITE-SPACE: nowrap;
@@ -25,48 +25,54 @@ $RNAV-CURSOR: auto;
 
 // Main Header - Subreddit Name
 $HEADER-HEIGHT: 100px;
-$HEADER-BACKGROUND: #99F;
+$HEADER-BACKGROUND: #333;
 $HEADER-IMAGE: none;
 $HEADER-FONT: helvetica arial sans-serif serif;
 $HEADER-FONT-SIZE: 48px;
 $HEADER-FONT-WEIGHT: bold;
-$HEADER-TEXT-COLOR: #900;
-$HEADER-BORDER: 1px solid #000;
+$HEADER-TEXT-COLOR: #000;
+$HEADER-BORDER: 1px solid #FFF;
 $HEADER-PADDING: 0px;
 $HEADER-MARGIN: 0px 0px 0px 0px;
 
 // Navigation Tabs
-$NAV-BACKGROUND-COLOR: #99F;
-$NAV-COLOR: #DDF;
+$NAV-BACKGROUND-COLOR: #333;
+$NAV-COLOR: #494;
 $NAV-SPACING: 0px;
-$NAV-SELECTED-BORDER: 1px solid #DDF;
-$NAV-SELECTED-TEXT-COLOR: #DDF;
-$NAV-SELECTED-BACKGROUND-COLOR: #99F;
-$NAV-HOVER-BACKGROUND-COLOR: #99F;
+$NAV-SELECTED-BORDER: 1px solid #FFF;
+$NAV-SELECTED-TEXT-COLOR: #6D6;
+$NAV-SELECTED-BACKGROUND-COLOR: #555;
+$NAV-HOVER-BACKGROUND-COLOR: #333;
+$NAV-HOVER-TEXT-COLOR: #6D6;
 
 // Account box
-$ACCOUNT-BACKGROUND-COLOR: #DDF;
-$ACCOUNT-BORDER: 1px solid #000;
+$ACCOUNT-BACKGROUND-COLOR: #555;
+$ACCOUNT-BORDER: 1px solid #FFF;
 $ACCOUNT-BORDER-RADIUS: 5px;
-$ACCOUNT-KARMA-COLOR: #888;
-$ACCOUNT-TEXT-COLOR: #99F;
+$ACCOUNT-KARMA-COLOR: #494;
+$ACCOUNT-TEXT-COLOR: #6D6;
 $ACCOUNT-FONT-WEIGHT: bold;
 
 // Main Content Links
-$CONTENT-COLOR: #000;
+$CONTENT-COLOR: #FFF;
 $CONTENT-VISITED: #888;
-$CONTENT-LINKS: #555;
+$CONTENT-LINKS: #6D6;
 
 // Side Box
-$SIDE-HEADER-TEXT-COLOR: #900;
+$SIDE-HEADER-TEXT-COLOR: #6D6;
 $SIDE-HEADER-FONT: helvetica arial sans-serif serif;
 $SIDE-HEADER-FONT-SIZE: 24px;
 $SIDE-HEADER-FONT-WEIGHT: bold;
-$SIDE-BACKGROUND-COLOR: #DDF;
-$SIDE-TEXT-COLOR: #000;
-$SIDE-LINK-COLOR: #99F;
+$SIDE-BACKGROUND-COLOR: #333;
+$SIDE-TEXT-COLOR: #FFF;
+$SIDE-LINK-COLOR: #6D6;
 $SIDE-FONT-WEIGHT: bold;
-$SIDE-SUBMIT-BUTTON-BORDER: 1px solid #000;
+$SIDE-SUBMIT-BUTTON-BORDER: 1px solid #FFF;
+
+// Post page customization
+$POST-CONTAINER-COLOR: #333;
+$POST-CONTAINER-TEXT-COLOR: #FFF;
+$POST-DIVIDER-COLOR: 2px solid #FFF;
 /* Background color is per individual content */
 /* Main body content */
 body {
@@ -92,7 +98,7 @@ a, .tagline a{
   border-bottom: $RNAV-BORDER;
 }
 /* Dropdown box colors */
-.drop-choices, .drop-choices a{
+.drop-choices, .drop-choices a, .sr-bar a{
   background-color: $RNAV-BACKGROUND-COLOR;
   color: $RNAV-TEXT-COLOR;
 }
@@ -135,6 +141,22 @@ a, .tagline a{
   font-size: $HEADER-FONT-SIZE;
   font-weight: $HEADER-FONT-WEIGHT;
   color: $HEADER-TEXT-COLOR;
+  /* THIS OUT comment this out to remove the header text effect */
+  text-shadow:
+    0 0 2px #FFF,
+    1px 1px 2px #FFF,
+    -1px -1px 2px #FFF,
+    1px 0 #FFF,
+    0 1px #FFF,
+    -1px 0 #FFF,
+    0 -1px #FFF,
+    3px 3px 3px rgba(0,0,0,50),
+    -3px -3px 3px rgba(0,0,0,50),
+    3px 0 3px rgba(0,0,0,50),
+    0 3px 3px rgba(0,0,0,50),
+    -3px 0 3px rgba(0,0,0,50),
+    0 -3px 3px rgba(0,0,0,50);
+  /* THIS OUT */
   /*color: $TRANSPARENT;*/ /* this will had the text allowing a image*/
 }
 /* Account management box */
@@ -167,6 +189,7 @@ a, .tagline a{
 .tabmenu li a:hover {
   /* advanced */
   background-color: $NAV-HOVER-BACKGROUND-COLOR;
+  color: $NAV-HOVER-TEXT-COLOR;
 }
 /* Selected tab styling */
 .tabmenu li.selected a {
@@ -216,4 +239,13 @@ a, .tagline a{
 /* remove nub(arror) on buttons */
 .nub {
 visibility: hidden;
+}
+ /* Post page colors */
+.roundfield, .content.submit .info-notice, .tabmenu.formtab .selected a {
+  background-color: $POST-CONTAINER-COLOR;
+  color: $POST-CONTAINER-TEXT-COLOR;
+}
+/* Post page divider color */
+.formtabs-content {
+  border-top: $POST-DIVIDER-COLOR;
 }
