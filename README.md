@@ -4,8 +4,9 @@
 
 
 ## USAGE:
+all files in the /css folder
 * NON-SASS - Copy/paste the CSS file into your subreddit stylesheet edit it.
-* SASS: Download the scss to edit and create your css file for copy/paste to your subreddit
+* SASS: Download the SCSS to edit and create your CSS file for copy/paste to your subreddit
 
 ## Notes:
 #### for none CSS users
