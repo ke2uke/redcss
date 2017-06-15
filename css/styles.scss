@@ -1,41 +1,39 @@
-/**
-  NOTES:
-    fonts will use the first compatible in the list
-    all colors can user the following formats
-      #FFFFFF
-      #FFF
-      rgba(0,0,0,0)
-    border format is as follows
-      size line-style color
-      EG: 1px solid #FFF
-
-    ITS RECOMMENDED TO USE THE SASS which will make it so much easier to
-    configure - http://sass-lang.com
-  */
-
+// Other
+$TRANSPARENT: rgba(0,0,0,0);
+$LOGO: none;
 // Page
 $BACKGROUND-COLOR: #DDF;
 $FONT: helvetica arial sans-serif serif; //Will use first font supported
 $LINK-COLOR: #99F;
 
 // Reddit Navigation - Subreddit links */
-$RNAV-FONT: helvetica arial sans-serif serif;
-$RNAV-FONT-WEIGHT: none;
+$RNAV-HEIGHT: 18px;
 $RNAV-BACKGROUND-COLOR: #DDF;
 $RNAV-DROPDOWN-BACKGROUND: #DDF;
+$RNAV-FONT: helvetica arial sans-serif serif;
+$RNAV-FONT-WEIGHT: n400;
+$RNAV-FONT-SIZE: 9px;
+$RNAV-LINE-HEIGHT: 18px;
 $RNAV-TEXT-COLOR: #000;
 $RNAV-DROPDOWN-TEXT-COLOR: #000;
 $RNAV-BORDER: 1px solid #000;
+$RNAV-MARGIN: 0px;
+$RNAV-PADDING: 0px;
+$RNAV-WHITE-SPACE: nowrap;
+$RNAV-TEXT-TRANSFORM: uppercase;
+$RNAV-CURSOR: auto;
 
 // Main Header - Subreddit Name
-$HEADER-FONT: helvetica arial sans-serif serif;
-$HEADER-SIZE: 48px;
-$HEADER-FONT-WEIGHT: bold;
-$HEADER-BACKGROUND: #99F;
-$HEADER-COLOR: #900;
-$HEADER-BORDER: 1px solid #000;
 $HEADER-HEIGHT: 100px;
-$HEADER-VERTICAL: 23px;
+$HEADER-BACKGROUND: #99F;
+$HEADER-IMAGE: none;
+$HEADER-FONT: helvetica arial sans-serif serif;
+$HEADER-FONT-SIZE: 48px;
+$HEADER-FONT-WEIGHT: bold;
+$HEADER-TEXT-COLOR: #900;
+$HEADER-BORDER: 1px solid #000;
+$HEADER-PADDING: 0px;
+$HEADER-MARGIN: 0px 0px 0px 0px;
 
 // Navigation Tabs
 $NAV-BACKGROUND-COLOR: #99F;
@@ -69,21 +67,29 @@ $SIDE-TEXT-COLOR: #000;
 $SIDE-LINK-COLOR: #99F;
 $SIDE-FONT-WEIGHT: bold;
 $SIDE-SUBMIT-BUTTON-BORDER: 1px solid #000;
-
+/* Background color is per individual content */
 /* Main body content */
 body {
   background-color: $BACKGROUND-COLOR;
   font-family: $FONT;
 }
+/* Link colors */
 a, .tagline a{
   color: $LINK-COLOR;
 }
 /* Reddit Navigation - Subreddit links */
 #sr-header-area {
-  border-bottom: $RNAV-BORDER;
+  height: $RNAV-HEIGHT;
+  background-color: $RNAV-BACKGROUND-COLOR;
   font-family: $RNAV-FONT;
   font-weight: $RNAV-FONT-WEIGHT;
-  background-color: $RNAV-BACKGROUND-COLOR;
+  font-size: $RNAV-FONT-SIZE;
+  line-height: $RNAV-LINE-HEIGHT;
+  text-transform: $RNAV-TEXT-TRANSFORM;
+  white-space: $RNAV-WHITE-SPACE;
+  margin: $RNAV-MARGIN;
+  padding: $RNAV-PADDING;
+  border-bottom: $RNAV-BORDER;
 }
 /* Dropdown box colors */
 .drop-choices, .drop-choices a{
@@ -95,31 +101,41 @@ a, .tagline a{
 }
 /* MYSUBREDDITS and EDIT menu colors */
 .dropdown.srdrop .selected, #sr-more-link {
-  color: $RNAV-DROPDOWN-TEXT-COLOR;
   background-color: $RNAV-DROPDOWN-BACKGROUND;
+  color: $RNAV-DROPDOWN-TEXT-COLOR;
 }
-/* Main Header content */
+/* Main Header style*/
 #header {
   background: $HEADER-BACKGROUND;
   border-bottom: $HEADER-BORDER;
   height: $HEADER-HEIGHT;
 }
-/* Reddit Logo Removed*/
+/**
+ *  Reddit Logo Removed
+ *  You can insert your own logo by following the commnets
+ */
 #header-img.default-header {
-  visibility: hidden;
-  width: 0px;
+  visibility: hidden; /* rmeove this  */
+  width: 0px; /* remove this */
+  background-image: $LOGO; /* url("image.png")  instead of "none" */
+  background-color: $TRANSPARENT;
 }
 /* Subreddit name box */
 #header-bottom-left {
-  margin-top: $HEADER-VERTICAL;
+  position: absolute; /* comment this out for more control */
+  bottom: 0; /* if you comment position out, comment this too */
+  margin: $HEADER-MARGIN;
+  padding: $HEADER-PADDING;
 }
 /* Subreddit Name */
 #header-bottom-left .redditname, #header-bottom-left .redditname a {
-  font-family: $HEADER-FONT;
-  font-size: $HEADER-SIZE;
-  font-weight: $HEADER-FONT-WEIGHT;
   background-color: $HEADER-BACKGROUND;
-  color: $HEADER-COLOR;
+  background-image: $HEADER-IMAGE; /* url("image.png")  instead of "none" */
+  font-family: $HEADER-FONT;
+  font-size: $HEADER-FONT-SIZE;
+  font-weight: $HEADER-FONT-WEIGHT;
+  color: $HEADER-TEXT-COLOR;
+  /*color: $TRANSPARENT;*/ /* this will had the text allowing a image*/
 }
 /* Account management box */
 #header-bottom-right {

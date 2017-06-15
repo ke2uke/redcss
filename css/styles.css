@@ -1,31 +1,26 @@
-/**
-  NOTES:
-    fonts will use the first compatible in the list
-    all colors can user the following formats
-      #FFFFFF
-      #FFF
-      rgba(0,0,0,0)
-    border format is as follows
-      size line-style color
-      EG: 1px solid #FFF
-
-    ITS RECOMMENDED TO USE THE SASS which will make it so much easier to
-    configure - http://sass-lang.com
-  */
+/* Background color is per individual content */
 /* Main body content */
 body {
   background-color: #DDF;
   font-family: helvetica arial sans-serif serif; }
 
+/* Link colors */
 a, .tagline a {
   color: #99F; }
 
 /* Reddit Navigation - Subreddit links */
 #sr-header-area {
-  border-bottom: 1px solid #000;
+  height: 18px;
+  background-color: #DDF;
   font-family: helvetica arial sans-serif serif;
-  font-weight: none;
-  background-color: #DDF; }
+  font-weight: n400;
+  font-size: 9px;
+  line-height: 18px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px solid #000; }
 
 /* Dropdown box colors */
 .drop-choices, .drop-choices a {
@@ -37,31 +32,48 @@ a, .tagline a {
 
 /* MYSUBREDDITS and EDIT menu colors */
 .dropdown.srdrop .selected, #sr-more-link {
-  color: #000;
-  background-color: #DDF; }
+  background-color: #DDF;
+  color: #000; }
 
-/* Main Header content */
+/* Main Header style*/
 #header {
   background: #99F;
   border-bottom: 1px solid #000;
   height: 100px; }
 
-/* Reddit Logo Removed*/
+/**
+ *  Reddit Logo Removed
+ *  You can insert your own logo by following the commnets
+ */
 #header-img.default-header {
   visibility: hidden;
-  width: 0px; }
+  /* rmeove this  */
+  width: 0px;
+  /* remove this */
+  background-image: none;
+  /* url("image.png")  instead of "none" */
+  background-color: transparent; }
 
 /* Subreddit name box */
 #header-bottom-left {
-  margin-top: 23px; }
+  position: absolute;
+  /* comment this out for more control */
+  bottom: 0;
+  /* if you comment position out, comment this too */
+  margin: 0px 0px 0px 0px;
+  padding: 0px; }
 
 /* Subreddit Name */
 #header-bottom-left .redditname, #header-bottom-left .redditname a {
+  background-color: #99F;
+  background-image: none;
+  /* url("image.png")  instead of "none" */
   font-family: helvetica arial sans-serif serif;
   font-size: 48px;
   font-weight: bold;
-  background-color: #99F;
-  color: #900; }
+  color: #900;
+  /*color: $TRANSPARENT;*/
+  /* this will had the text allowing a image*/ }
 
 /* Account management box */
 #header-bottom-right {
