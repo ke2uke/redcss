@@ -1,6 +1,6 @@
 # /r/redcss
 ### Reddit CSS
-#### author: Luke E Summerscales
+#### author: Luke E Summerscales @Sadface_RL
 
 ## Notes:
 #### for none CSS users
