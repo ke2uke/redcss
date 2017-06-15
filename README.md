@@ -1,6 +1,14 @@
 # /r/redcss
 ### Reddit CSS
-#### author: Luke E Summerscales \\@Sadface_RL
+
+#### author: Luke E Summerscales @Sadface_RL
+
+
+## USAGE:
+all files in the /css folder
+* NON-SASS - Copy/paste the CSS file into your subreddit stylesheet edit it.
+* SASS: Download the SCSS to edit and create your CSS file for copy/paste to your subreddit
+>>>>>>> 1cc2c5c728ab95938e7282708bc8b693d52ec366
 
 ## Notes:
 #### for none CSS users
